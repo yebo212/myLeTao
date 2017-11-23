@@ -1,0 +1,113 @@
+body {
+  background-color: #fff;
+}
+.lt_search {
+  right: 10px;
+}
+.lt_view {
+  padding-top: 45px;
+  padding-bottom: 55px;
+}
+.lt_view .lt_banner .mui-slider-indicator {
+  margin-bottom: 10px;
+}
+.lt_view .lt_nav {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.lt_view .lt_nav a {
+  float: left;
+  width: 33.33333333%;
+}
+.lt_view .lt_nav a img {
+  width: 100%;
+}
+.lt_view .lt_adv {
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+.lt_view .lt_adv a {
+  width: 67.2%;
+  float: left;
+}
+.lt_view .lt_adv a img {
+  width: 50%;
+}
+.lt_view .lt_adv a:nth-of-type(2) {
+  float: right;
+  width: 32.8%;
+}
+.lt_view .lt_adv a:nth-of-type(2) img {
+  width: 100%;
+}
+.lt_view .lt_brand {
+  width: 100%;
+  padding: 0 10px;
+}
+.lt_view .lt_brand .lt_brand_title img {
+  width: 100%;
+}
+.lt_view .lt_brand .lt_brands {
+  width: 100%;
+}
+.lt_view .lt_brand .lt_brands a {
+  width: 25%;
+  float: left;
+}
+.lt_view .lt_brand .lt_brands a img {
+  width: 100%;
+}
+.lt_view .lt_sport {
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.lt_view .lt_sport .lt_sport_title img {
+  width: 100%;
+}
+.lt_view .box {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+}
+.lt_view .box .border {
+  box-shadow: 0 0 5px #ccc;
+  padding: 10px 0;
+}
+.lt_view .box .border img {
+  width: 100%;
+}
+.lt_view .box .border p:nth-of-type(1) {
+  padding: 0 10px;
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+}
+.lt_view .box .border p:nth-of-type(2) {
+  color: red;
+  font-size: 12px;
+}
+.lt_view .box .border p:nth-of-type(2) .oldPrice {
+  color: #ccc;
+  margin-left: 5px;
+  text-decoration: line-through;
+}
+.lt_view .box .border button {
+  background-color: purple;
+  color: #fff;
+}
+.lt_view .lt_lady {
+  padding: 0 10px;
+}
+.lt_view .lt_lady img {
+  width: 100%;
+}
+.lt_view .lt_man {
+  padding: 0 10px;
+}
+.lt_view .lt_man img {
+  width: 100%;
+}
