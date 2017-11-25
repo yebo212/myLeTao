@@ -27,7 +27,8 @@ header {
 header .lt_title {
   font-size: 16px;
 }
-header .lt_search {
+header .lt_search,
+header .lt_back {
   font-size: 18px;
   font-weight: 800;
   position: absolute;

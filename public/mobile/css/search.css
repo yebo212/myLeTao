@@ -1,3 +1,6 @@
+body {
+  background-color: #fff;
+}
 .lt_search {
   left: 10px;
 }
@@ -52,9 +55,14 @@
   padding: 0 10px;
   border-bottom: none;
 }
+.lt_view ul li .link {
+  float: left;
+  width: 50%;
+}
 .lt_view ul li:last-child {
   border-bottom: 1px solid #ccc;
 }
-.lt_view ul li span {
+.lt_view ul li .mui-pull-right {
+  float: right;
   margin-top: 7px;
 }

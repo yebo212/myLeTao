@@ -13,53 +13,67 @@
   <link rel="stylesheet" href="asset/mui/css/mui.min.css">
   <link rel="stylesheet" href="asset/fontAwesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/cate.css">
 </head>
 <body>
 <!--头部-->
 <header>
   <span class="lt_title">
-    搜索中心
+    <input type="text">
   </span>
-  <a href="javascript:history.back();" class="lt_search mui-pull-left"><span class="fa fa-arrow-left"></span></a>
+  <a href="javascript:history.back();" class="lt_back mui-pull-left"><span class="fa fa-arrow-left"></span></a>
+  <a href="search.html" class="lt_search mui-pull-right"><span class="fa fa-search"></span></a>
 </header>
-<div class="lt_view">
-  <div class="search mui-clearfix">
-    <input class="txt_search" type="text" placeholder="搜索你喜欢的商品">
-    <button class="btn_search" type="button">搜索</button>
+<!--页面主体-->
+<div class="lt_view mui-clearfix">
+  <div class="mui-scroll-wrapper">
+    <div class="mui-scroll">
+  <div class="lt_left">
+    <!--<ul>-->
+      <!--<li>1</li>-->
+      <!--<li>2</li>-->
+      <!--<li>3</li>-->
+      <!--<li>4</li>-->
+    <!--</ul>-->
   </div>
-  <div class="lt_history"></div>
+    </div>
+  </div>
+  <div class="lt_right_box">
+    <div class="lt_right">
+    </div>
+  </div>
 </div>
 <!--尾部-->
 <footer class="mui-clearfix">
   <a href="index.html" class="fa fa-home"><span>首页</span></a>
-  <a href="cate.html" class="fa fa-bars"><span>分类</span></a>
+  <a href="#" class="fa fa-bars"><span>分类</span></a>
   <a href="#" class="fa fa-shopping-cart"><span >购物车</span></a>
   <a href="#" class="fa fa-user"><span>会员中心</span></a>
 </footer>
 </body>
 </html>
 <script src="asset/mui/js/mui.min.js"></script>
+<script src="asset/artTemplate/template.js"></script>
 <script src="asset/artTemplate/template-native.js"></script>
 <script src="asset/zepto/zepto.min.js"></script>
-<script src="js/search.js"></script>
-<script type="text/html" id="searchTpl">
-  <% if(model && model.length){ %>
-  <div>
-    <div class="mui-clearfix">
-      <span class="mui-pull-left">搜索历史</span>
-      <span class="mui-pull-right fa fa-trash">清空记录</span>
-    </div>
-    <ul>
-      <% for(var i = model.length-1 ; i >=0 ; i --){ %>
-      <li>
-        <a data-key="<%=model[i]%>" class="link" href="javascript:;"><%=model[i]%></a>
-        <span class="fa fa-times mui-pull-right"></span>
-      </li>
-      <% } %>
-    </ul>
-    <%}else{%>
-    <span class="title">没有历史搜索记录。</span>
-  </div>
-  <% } %>
+<script src="js/cate.js"></script>
+<script type="text/html" id="cate_slide">
+  <ul>
+    <% for(var i = 0 ; i < model.list.length ; i ++){ %>
+    <% var item = model.list[i]; %>
+    <li class="<%=model.currId==0&&i==0?'now':(model.currId==item.id?'now':'')%>" data-id="<%=item.id%>"><%=item.categoryName%></li>
+    <% } %>
+  </ul>
+</script>
+<script type="text/html" id="cate_content">
+  <ul class="mui-clearfix">
+    <% if(!model.list.length ){ %>
+    <div>没有数据</div>
+    <% }else{ %>
+    <% for(var i = 0 ; i < model.list.length ; i ++){ %>
+    <% var item = model.list[i]; %>
+    <li data-id="<%=item.id%>"><a href="#"><img src="<%=item.brandLogo%>" alt="<%=item.brandName%>"/><p><%=item.brandName%></p></a></li>
+    <% } %>
+    <% } %>
+  </ul>
 </script>
